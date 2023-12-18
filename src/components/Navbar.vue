@@ -15,7 +15,7 @@ const toggleTheme = ()=>{
       <v-btn icon="mdi-github" variant="tonal"></v-btn>  
     </a>
    <div class="d-flex flex-column text-center">
-    <a href="/" target="_blank" class="font-weight-bold " >
+    <a href="/"  class="font-weight-bold " >
       <v-btn prepend-icon="mdi-food-drumstick" variant="tonal">رزرو غذا</v-btn>  
     </a>
    </div>
