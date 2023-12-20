@@ -23,6 +23,7 @@ import Navbar from '../components/Navbar.vue'
         <v-text-field
           clearable
           label="رمز عبور"
+          type="password"
         ></v-text-field>
 
         <br>
