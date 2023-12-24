@@ -45,9 +45,9 @@ import Navbar from '../components/Navbar.vue'
         <div class="w-75 rounded pa-7 content-xs">
           <h3 class="text-center py-4">ورود دانشجو</h3>
           <form class="py-4" >
-            <v-text-field class="mb-2" clearable label="ایمیل" type="email" required oninvalid="this.setCustomValidity('لطفا ایمیل خود را به درستی وارد کنید')" ></v-text-field>
+            <v-text-field class="mb-2" clearable label="ایمیل" type="email" required oninvalid="this.setCustomValidity('لطفا ایمیل خود را به درستی وارد کنید')" oninput="this.setCustomValidity('')" ></v-text-field>
 
-            <v-text-field clearable label="رمز عبور" type="password" required oninvalid="this.setCustomValidity('لطفا رمز عیور خود را وارد کنید')" ></v-text-field>
+            <v-text-field clearable label="رمز عبور" type="password" required oninvalid="this.setCustomValidity('لطفا رمز عیور خود را وارد کنید')" oninput="this.setCustomValidity('')"></v-text-field>
 
             <br>
 
