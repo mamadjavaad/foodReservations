@@ -44,17 +44,18 @@ import Navbar from '../components/Navbar.vue'
         </div>
         <div class="w-75 rounded pa-7 content-xs">
           <h3 class="text-center py-4">ورود دانشجو</h3>
-          <v-form class="py-4">
-            <v-text-field class="mb-2" clearable label="ایمیل"></v-text-field>
+          <form class="py-4" >
+            <v-text-field class="mb-2" clearable label="ایمیل" type="email" required></v-text-field>
 
-            <v-text-field clearable label="رمز عبور" type="password"></v-text-field>
+            <v-text-field clearable label="رمز عبور" type="password" required></v-text-field>
 
             <br>
 
             <v-btn type="submit" variant="outlined" block>
               ورود
             </v-btn>
-          </v-form>
+          </form>
+          
         </div>
 
       </div>
