@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 
 const boxFlag = ref(true);
 const items = [
@@ -27,12 +27,16 @@ const items = [
   },
 
 ]
-// toggle theme
+// toggle theme and set coockie using theme store
+import useThemeStore from '@/store/theme'
+const { setTheme, toggleTheme } = useThemeStore();
 import { useTheme } from 'vuetify'
 const theme = useTheme()
-const toggleTheme = () => {
-  theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark'
-}
+
+onMounted(() => {
+
+  setTheme(theme)
+})
 // import components
 import Navbar from '../components/Navbar.vue'
 </script>
@@ -40,20 +44,20 @@ import Navbar from '../components/Navbar.vue'
 <template>
   <v-layout class="d-flex flex-column flex-wrap">
     <Navbar>
-    <!-- nav slots -->
-      
-    <template v-slot:nav-left>
-      <a href="https://github.com/mamadjavaad" target="_blank">
-          <v-btn icon="mdi-github" variant="tonal"></v-btn>
-        </a>
+      <!-- nav slots -->
+
+      <template v-slot:nav-left>
+        <v-btn icon="mdi-theme-light-dark" @click="toggleTheme(theme)" variant="tonal"></v-btn>
       </template>
       <template v-slot:nav-center>
-          <a href="/" class="font-weight-bold ">
-            <v-btn prepend-icon="mdi-food-drumstick" variant="tonal">رزرو غذا</v-btn>
-          </a>
+        <a href="/" class="font-weight-bold ">
+          <v-btn prepend-icon="mdi-food-drumstick" variant="tonal">رزرو غذا</v-btn>
+        </a>
       </template>
       <template v-slot:nav-right>
-        <v-btn icon="mdi-theme-light-dark" @click="toggleTheme()" variant="tonal"></v-btn>
+        <a href="https://github.com/mamadjavaad" target="_blank">
+          <v-btn icon="mdi-github" variant="tonal"></v-btn>
+        </a>
       </template>
 
     </Navbar>
@@ -139,4 +143,5 @@ import Navbar from '../components/Navbar.vue'
       width: 100% !important;
     }
   }
-}</style>
+}
+</style>
