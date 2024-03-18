@@ -13,6 +13,9 @@ const router = createRouter({
       path: '/panel',
       name: 'panel',
       component: () => import('../layouts/UserPanel.vue'),
+      children:[
+        {path: '', name:'Profile',component: () => import('../views/UserPanel/Profile.vue')},
+      ]
     }
   ]
 })
