@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref } from 'vue';
 
 const boxFlag = ref(true);
 const items = [
@@ -27,51 +27,37 @@ const items = [
   },
 
 ]
-// toggle theme and set coockie using theme store
-import useThemeStore from '@/store/theme'
-const { setTheme, toggleTheme } = useThemeStore();
-import { useTheme } from 'vuetify'
-const theme = useTheme()
 
-onMounted(() => {
-
-  setTheme(theme)
-})
-// import components
+// import components and icons
 import Navbar from '../components/Navbar.vue'
 </script>
 
 <template>
   <v-layout class="d-flex flex-column flex-wrap">
     <Navbar>
-      <!-- nav slots -->
-
-      <template v-slot:nav-left>
-        <v-btn icon="mdi-theme-light-dark" @click="toggleTheme(theme)" variant="tonal"></v-btn>
-      </template>
       <template v-slot:nav-center>
         <a href="/" class="font-weight-bold ">
-          <v-btn prepend-icon="mdi-food-drumstick" variant="tonal">رزرو غذا</v-btn>
+          <v-btn  variant="tonal" color="#f7f7f4d1">
+            <img src="../assets/logo.svg" alt="scuLogo" class="mr-3">
+            رزرو غذا دانشگاه چمران
+          </v-btn>
         </a>
       </template>
-      <template v-slot:nav-right>
-        <a href="https://github.com/mamadjavaad" target="_blank">
-          <v-btn icon="mdi-github" variant="tonal"></v-btn>
-        </a>
-      </template>
-
     </Navbar>
-
-    <div class="w-100 d-flex align-center justify-center">
+    <div class="w-100 d-flex align-center justify-center" style="background: #dde382;">
       <v-btn prepend-icon="mdi-post-outline" variant="text" @click="boxFlag = false"
-        :class="!boxFlag ? 'border-t-black rounded-0' : ''">اطلاعیه ها</v-btn>
+        :class="!boxFlag ? 'border-t-green rounded-0' : ''">اطلاعیه ها</v-btn>
       <v-btn prepend-icon="mdi-login" variant="text" @click="boxFlag = true"
-        :class="boxFlag ? 'border-t-black rounded-0' : ''">ورود به پنل</v-btn>
+        :class="boxFlag ? 'border-t-green rounded-0' : ''">ورود به پنل</v-btn>
     </div>
+
     <v-main class="d-flex align-center justify-center mt-14">
-      <div class="d-flex w-50  mt-9 mb-3 rounded border container-xs " style="min-height: 440px;" v-if="boxFlag">
-        <div class="w-25 bg-purple-accent-4 rounded d-flex justify-center align-center banner-xs">
-          <v-icon style="font-size: 50px;">mdi-lock</v-icon>
+
+      <!-- login : ورود -->
+      <div class="d-flex w-50  mt-9 mb-3 rounded-xl container-xs " style="min-height: 440px;background-color: white;"
+        v-if="boxFlag">
+        <div class="w-25 d-flex justify-center align-center banner-xs">
+          <v-icon style="font-size: 50px; color: #dde382;">mdi-lock</v-icon>
 
         </div>
         <div class="w-75 rounded pa-7 content-xs">
@@ -87,7 +73,7 @@ import Navbar from '../components/Navbar.vue'
 
             <br>
 
-            <v-btn type="submit" variant="outlined" block>
+            <v-btn type="submit" variant="flat" block color="#dde382" to="/panel">
               ورود
             </v-btn>
           </form>
@@ -95,10 +81,11 @@ import Navbar from '../components/Navbar.vue'
         </div>
 
       </div>
-
-      <div class="d-flex w-50 mb-9  rounded border container-xs" style="min-height: 440px;" v-if="!boxFlag">
-        <div class="w-25 bg-purple-accent-4 rounded d-flex justify-center align-center banner-xs">
-          <v-icon style="font-size: 50px;">mdi-account-voice</v-icon>
+      <!-- blogs : اطلاعیه ها -->
+      <div class="d-flex w-50 mb-9  rounded-xl container-xs" style="min-height: 440px;background-color: white;"
+        v-if="!boxFlag">
+        <div class="w-25 d-flex justify-center align-center banner-xs">
+          <v-icon style="font-size: 50px; color: #dde382;">mdi-account-voice</v-icon>
 
         </div>
         <div class="w-75 rounded py-5 content-xs">
@@ -117,8 +104,15 @@ import Navbar from '../components/Navbar.vue'
   </v-layout>
 </template>
 <style lang="scss" scoped>
-.border-t-black {
-  border-top: 1px solid black;
+.border-t-green {
+  border-top: 3px solid #4b936c;
+}
+
+.banner-xs {
+  background-color: #328458;
+  border-radius: 20px ;
+  border-top-right-radius: 0px ;
+  border-bottom-right-radius: 0px ;
 }
 
 //responsive width for devises with max 1300px size
@@ -136,7 +130,12 @@ import Navbar from '../components/Navbar.vue'
 
     .banner-xs {
       width: 100% !important;
-      padding: 20px;
+      padding: 30px;
+      border-top-right-radius: 20px !important;
+      border-bottom-right-radius: 20px !important;
+      border-bottom-left-radius: 0px !important;
+      border-bottom-right-radius: 0px !important;
+
     }
 
     .content-xs {

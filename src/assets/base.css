@@ -9,7 +9,10 @@
   font-family: "MainFont", sans-serif;
 
 }
+body{
+  background: linear-gradient(to right, #214933, #0c826c);
 
+}
 a {
   color: inherit;
   text-decoration: none;
