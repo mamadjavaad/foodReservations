@@ -51,13 +51,13 @@ import Navbar from '../components/Navbar.vue'
         :class="boxFlag ? 'border-t-green rounded-0' : ''">ورود به پنل</v-btn>
     </div>
 
-    <v-main class="d-flex align-center justify-center mt-14">
+    <v-main class="d-flex align-center justify-center mt-14 mb-1">
 
       <!-- login : ورود -->
-      <div class="d-flex w-50  mt-9 mb-3 rounded-xl container-xs " style="min-height: 440px;background-color: white;"
+      <div class="d-flex w-50  mt-6 mb-5 rounded-xl container-xs " style="min-height: 440px;background-color: white;"
         v-if="boxFlag">
         <div class="w-25 d-flex justify-center align-center banner-xs">
-          <v-icon style="font-size: 50px; color: #dde382;">mdi-lock</v-icon>
+          <v-icon style="font-size: 50px; color: #dde382;">mdi-food-fork-drink</v-icon>
 
         </div>
         <div class="w-75 rounded pa-7 content-xs">
@@ -82,24 +82,33 @@ import Navbar from '../components/Navbar.vue'
 
       </div>
       <!-- blogs : اطلاعیه ها -->
-      <div class="d-flex w-50 mb-9  rounded-xl container-xs" style="min-height: 440px;background-color: white;"
+      <div class="d-flex w-50 mt-6 mb-5 rounded-xl container-xs" style="min-height: 440px;background-color: white;"
         v-if="!boxFlag">
         <div class="w-25 d-flex justify-center align-center banner-xs">
-          <v-icon style="font-size: 50px; color: #dde382;">mdi-account-voice</v-icon>
+          <v-icon style="font-size: 50px; color: #dde382;"> mdi-sofa-single</v-icon>
 
         </div>
-        <div class="w-75 rounded py-5 content-xs">
-          <h3 class="text-center pb-3">اطلاعیه ها</h3>
-          <v-list :items="items" item-props lines="three" style="direction: rtl;">
-            <template v-slot:subtitle="{ subtitle }">
-              <div v-html="subtitle"></div>
+      <div class="w-75 rounded py-5 content-xs">
+    <h3 class="text-center pb-3">اطلاعیه ها</h3>
+    <v-virtual-scroll :items="items" :item-height="50" height="300" style="direction: rtl;">
+      <template v-slot:default="{ item }">
+        <v-list-item :key="item.id">  <v-list-item-content>
+            <v-list-item-title v-html="item.title"></v-list-item-title>
+            <template v-if="item.subtitle">
+              <v-list-item-subtitle v-html="item.subtitle"></v-list-item-subtitle>
             </template>
-          </v-list>
-
-        </div>
+          </v-list-item-content>
+        </v-list-item>
+      </template>
+    </v-virtual-scroll>
+  </div>
 
       </div>
     </v-main>
+        <div data-v-b4e148ca="" class="px-4 text-center w-100" style="
+    font-size: 14px;
+    color: #dde382;
+"> © 1403 — دانشگاه شهید چمران اهواز </div> 1
 
   </v-layout>
 </template>
