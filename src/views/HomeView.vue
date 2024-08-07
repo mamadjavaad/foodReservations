@@ -108,7 +108,7 @@ import Navbar from '../components/Navbar.vue'
         <div data-v-b4e148ca="" class="px-4 text-center w-100" style="
     font-size: 14px;
     color: #dde382;
-"> © 1403 — دانشگاه شهید چمران اهواز </div> 1
+"> © 1403 — دانشگاه شهید چمران اهواز </div> 
 
   </v-layout>
 </template>
