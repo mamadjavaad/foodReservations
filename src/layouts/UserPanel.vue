@@ -19,8 +19,7 @@ const drawer = ref(null)
         </template>
 
     </Navbar>
-    <v-layout class="v-flex flex-column justify-center">
-
+    <v-layout class="v-flex justify-center bg-shades-white" style="min-height: 100dvh !important;">
         <v-navigation-drawer location="right" v-model="drawer">
             <template v-slot:prepend>
                 <v-list-item lines="three" title="محمدجواد فخرایی" subtitle="40118537">
@@ -34,7 +33,6 @@ const drawer = ref(null)
             <v-divider></v-divider>
 
             <v-list density="compact" nav>
-                <!-- <v-list-item prepend-icon="mdi-home-city" title="داشبورد" value="home"></v-list-item> -->
                 <v-list-item prepend-icon="mdi-account" title="پروفایل من" value="account"></v-list-item>
 
                 <v-list-group value="Food">
