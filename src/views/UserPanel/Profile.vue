@@ -49,8 +49,8 @@
         <div class=" d-flex border my-2 rounded-lg pa-2 mx-6 flex-wrap justify-center align-center info-card">
             <ul class="pa-2" style="direction: rtl;">
                 <li class="py-2 px-5"><i class="mdi mdi-cash-100"></i> میزان اعتبار : 1,252,760 ﷼ </li>
-                <li class="py-2 px-5"><i class="mdi mdi-school-outline"></i> شماره بارکد: 585425030</li>
-                <li class="py-2 px-5"><i class="mdi mdi-barcode-scan"></i> تاریخ اعتبار : 1405/12/20</li>
+                <li class="py-2 px-5"><i class="mdi mdi-barcode-scan"></i> شماره بارکد: 585425030</li>
+                <li class="py-2 px-5"><i class="mdi mdi-calendar-range"></i> تاریخ اعتبار : 1405/12/20</li>
                 <li class="py-2 px-5"><i class="mdi mdi-clock-time-eight-outline"></i> آخرین ورود :  16:50 - 1403/05/03</li>
             </ul>
 
