@@ -17,6 +17,9 @@ a {
   color: inherit;
   text-decoration: none;
 }
+ul {
+  list-style: none;
+}
 .v-layout {
   font-family: "MainFont", sans-serif !important;
 }
