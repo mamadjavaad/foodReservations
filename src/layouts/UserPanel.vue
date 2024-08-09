@@ -5,7 +5,7 @@ const drawer = ref(null)
 
 </script>
 <template>
-    <Navbar flex-justify="space-between">
+    <Navbar flex-justify="space-between" style="padding: 10px !important;">
         <template v-slot:nav-left>
             <v-btn icon="mdi-location-exit" :to="{ path: '/', exact: true }" variant="tonal"></v-btn>
         </template>
@@ -33,7 +33,7 @@ const drawer = ref(null)
             <v-divider></v-divider>
 
             <v-list density="compact" nav>
-                <v-list-item prepend-icon="mdi-account" title="پروفایل من" value="account"></v-list-item>
+                <v-list-item prepend-icon="mdi-account" title="پروفایل من" value="account" to="/panel"></v-list-item>
 
                 <v-list-group value="Food">
                     <template v-slot:activator="{ props }">
@@ -48,7 +48,7 @@ const drawer = ref(null)
 
                 </v-list-group>
 
-                <v-list-group value="finance">
+                <!-- <v-list-group value="finance">
                     <template v-slot:activator="{ props }">
                         <v-list-item prepend-icon="mdi-cash-fast " v-bind="props" title="امکانات مالی"></v-list-item>
                     </template>
@@ -60,8 +60,11 @@ const drawer = ref(null)
                         prepend-icon="mdi-clipboard-text-clock-outline"></v-list-item>
 
 
-                </v-list-group>
-                <v-list-item prepend-icon="mdi-exit-to-app" title="خروج" value="exit"></v-list-item>
+                </v-list-group> -->
+                <!-- FIXME: امکانات مالی could be a page that have تاریخچه-انتقال اعتبار-تاریخچه مالی -->
+                <v-list-item prepend-icon="mdi-cash-fast " title="امکانات مالی" value="finance" to="/panel/finance"></v-list-item>
+
+                <v-list-item prepend-icon="mdi-exit-to-app" title="خروج" value="exit" to="/"></v-list-item>
 
 
             </v-list>
