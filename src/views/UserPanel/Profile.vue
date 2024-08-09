@@ -2,7 +2,6 @@
 
 
     <v-main class="d-flex flex-column w-100 flex-wrap align-center">
-       <!-- WARNING:  a design for mobile is needed : separate box column -->
         <div class="d-flex flex-wrap justify-space-around rounded-xl mt-5"
             style="background-color: #128447d9;width: 82% !important">
             <div class="px-14 py-6 text-white d-flex flex-column justify-center align-center" style="height: 70px;">
