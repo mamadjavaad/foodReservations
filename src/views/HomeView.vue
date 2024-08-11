@@ -37,7 +37,7 @@ import Navbar from '../components/Navbar.vue'
     <Navbar>
       <template v-slot:nav-center>
         <a href="/" class="font-weight-bold ">
-          <v-btn  variant="tonal" color="#f7f7f4d1">
+          <v-btn variant="tonal" color="#f7f7f4d1">
             <img src="../assets/logo.svg" alt="scuLogo" class="mr-3">
             رزرو غذا دانشگاه چمران
           </v-btn>
@@ -54,7 +54,7 @@ import Navbar from '../components/Navbar.vue'
     <v-main class="d-flex align-center justify-center mt-14 mb-1">
 
       <!-- login : ورود -->
-      <div class="d-flex w-50  mt-6 mb-5 rounded-xl container-xs " style="min-height: 440px;background-color: white;"
+      <div class="d-flex w-50 mb-5 rounded-xl container-xs " style="min-height: 440px;background-color: white;"
         v-if="boxFlag">
         <div class="w-25 d-flex justify-center align-center banner-xs">
           <v-icon style="font-size: 50px; color: #dde382;">mdi-food-fork-drink</v-icon>
@@ -82,33 +82,33 @@ import Navbar from '../components/Navbar.vue'
 
       </div>
       <!-- blogs : اطلاعیه ها -->
-      <div class="d-flex w-50 mt-6 mb-5 rounded-xl container-xs" style="min-height: 440px;background-color: white;"
+      <div class="d-flex w-50 mb-5 rounded-xl container-xs" style="min-height: 440px;background-color: white;"
         v-if="!boxFlag">
         <div class="w-25 d-flex justify-center align-center banner-xs">
           <v-icon style="font-size: 50px; color: #dde382;"> mdi-sofa-single</v-icon>
 
         </div>
-      <div class="w-75 rounded py-5 content-xs">
-    <h3 class="text-center pb-3">اطلاعیه ها</h3>
-    <v-virtual-scroll :items="items" :item-height="50" height="300" style="direction: rtl;">
-      <template v-slot:default="{ item }">
-        <v-list-item :key="item.id">  <v-list-item-content>
-            <v-list-item-title v-html="item.title"></v-list-item-title>
-            <template v-if="item.subtitle">
-              <v-list-item-subtitle v-html="item.subtitle"></v-list-item-subtitle>
+        <div class="w-75 rounded py-5 content-xs">
+          <h3 class="text-center pb-3">اطلاعیه ها</h3>
+          <v-virtual-scroll :items="items" :item-height="50" height="300" style="direction: rtl;">
+            <template v-slot:default="{ item }">
+              <v-list-item :key="item.id"> <v-list-item-content>
+                  <v-list-item-title v-html="item.title"></v-list-item-title>
+                  <template v-if="item.subtitle">
+                    <v-list-item-subtitle v-html="item.subtitle"></v-list-item-subtitle>
+                  </template>
+                </v-list-item-content>
+              </v-list-item>
             </template>
-          </v-list-item-content>
-        </v-list-item>
-      </template>
-    </v-virtual-scroll>
-  </div>
+          </v-virtual-scroll>
+        </div>
 
       </div>
     </v-main>
-        <div data-v-b4e148ca="" class="px-4 text-center w-100" style="
+    <div data-v-b4e148ca="" class="px-4 text-center w-100" style="
     font-size: 14px;
     color: #dde382;
-"> © 1403 — دانشگاه شهید چمران اهواز </div> 
+"> © 1403 — دانشگاه شهید چمران اهواز </div>
 
   </v-layout>
 </template>
@@ -119,9 +119,9 @@ import Navbar from '../components/Navbar.vue'
 
 .banner-xs {
   background-color: #328458;
-  border-radius: 20px ;
-  border-top-right-radius: 0px ;
-  border-bottom-right-radius: 0px ;
+  border-radius: 20px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
 }
 
 //responsive width for devises with max 1300px size
