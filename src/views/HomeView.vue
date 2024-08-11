@@ -92,12 +92,11 @@ import Navbar from '../components/Navbar.vue'
           <h3 class="text-center pb-3">اطلاعیه ها</h3>
           <v-virtual-scroll :items="items" :item-height="50" height="300" style="direction: rtl;">
             <template v-slot:default="{ item }">
-              <v-list-item :key="item.id"> <v-list-item-content>
-                  <v-list-item-title v-html="item.title"></v-list-item-title>
-                  <template v-if="item.subtitle">
-                    <v-list-item-subtitle v-html="item.subtitle"></v-list-item-subtitle>
-                  </template>
-                </v-list-item-content>
+              <v-list-item :key="item.id">
+                <v-list-item-title v-html="item.title"></v-list-item-title>
+                <template v-if="item.subtitle">
+                  <v-list-item-subtitle v-html="item.subtitle"></v-list-item-subtitle>
+                </template>
               </v-list-item>
             </template>
           </v-virtual-scroll>
