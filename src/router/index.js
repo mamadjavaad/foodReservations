@@ -15,6 +15,8 @@ const router = createRouter({
       component: () => import('../layouts/UserPanel.vue'),
       children:[
         {path: '', name:'Profile',component: () => import('../views/UserPanel/Profile.vue')},
+        {path: 'finance', name:'Finance',component: () => import('../views/UserPanel/Finance.vue')},
+      
       ]
     }
   ]

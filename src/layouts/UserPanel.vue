@@ -33,7 +33,8 @@ const drawer = ref(null)
             <v-divider></v-divider>
 
             <v-list density="compact" nav>
-                <v-list-item prepend-icon="mdi-account" title="پروفایل من" value="account" to="/panel"></v-list-item>
+                <!-- WARNING: list item active bug when we are in finance profile btn is still active -->
+                <v-list-item prepend-icon="mdi-account" title="پروفایل من" value="account" :to="{ name:'Profile',exact:true }" ></v-list-item>
 
                 <v-list-group value="Food">
                     <template v-slot:activator="{ props }">
@@ -48,21 +49,8 @@ const drawer = ref(null)
 
                 </v-list-group>
 
-                <!-- <v-list-group value="finance">
-                    <template v-slot:activator="{ props }">
-                        <v-list-item prepend-icon="mdi-cash-fast " v-bind="props" title="امکانات مالی"></v-list-item>
-                    </template>
-                    <v-list-item value="increaseCredit" title="افزایش اعتبار"
-                        prepend-icon="mdi-cash-multiple"></v-list-item>
-                    <v-list-item value="transferCredit" title="انتقال اعتبار"
-                        prepend-icon="mdi-bank-transfer-out"></v-list-item>
-                    <v-list-item value="financeHistory" title="تاریخچه مالی"
-                        prepend-icon="mdi-clipboard-text-clock-outline"></v-list-item>
 
-
-                </v-list-group> -->
-                <!-- FIXME: امکانات مالی could be a page that have تاریخچه-انتقال اعتبار-تاریخچه مالی -->
-                <v-list-item prepend-icon="mdi-cash-fast " title="امکانات مالی" value="finance" to="/panel/finance"></v-list-item>
+                <v-list-item prepend-icon="mdi-cash-fast " title="امکانات مالی" value="finance" :to="{ name:'Finance',exact: true  }"></v-list-item>
 
                 <v-list-item prepend-icon="mdi-exit-to-app" title="خروج" value="exit" to="/"></v-list-item>
 
