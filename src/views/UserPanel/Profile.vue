@@ -69,7 +69,7 @@
             <div class="mt-1 w-100 d-flex flex-wrap justify-center">
                 <v-btn class="ma-1" size="small">رزرو هفتگی</v-btn>
                 <v-btn class="ma-1" size="small">روز فروش</v-btn>
-                <v-btn class="ma-1" size="small">کد فراموشی</v-btn>
+                <v-btn class="ma-1" size="small" :to="{name:'ForgotReceipt',exact:true}">کد فراموشی</v-btn>
             </div>
         </div>
 

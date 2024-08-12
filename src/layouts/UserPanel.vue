@@ -43,7 +43,7 @@ const drawer = ref(null)
 
                     <v-list-item value="weekly" title="رزرو هفتگی" prepend-icon="mdi-calendar-week"></v-list-item>
                     <v-list-item value="daily" title="روز فروش" prepend-icon="mdi-sun-clock-outline"></v-list-item>
-                    <v-list-item value="forgotReceipt" title="کد فراموشی"
+                    <v-list-item :to="{name:'ForgotReceipt',exact:true}" value="forgotReceipt" title="کد فراموشی"
                         prepend-icon="mdi-lock-question"></v-list-item>
 
 

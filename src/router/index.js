@@ -16,6 +16,7 @@ const router = createRouter({
       children:[
         {path: '', name:'Profile',component: () => import('../views/UserPanel/Profile.vue')},
         {path: 'finance', name:'Finance',component: () => import('../views/UserPanel/Finance.vue')},
+        {path: 'forgotreceipt', name:'ForgotReceipt',component: () => import('../views/UserPanel/ForgotReceipt.vue')},
       
       ]
     }
