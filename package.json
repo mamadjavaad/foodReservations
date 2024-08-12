@@ -12,6 +12,7 @@
     "vue": "^3.3.11",
     "vue-router": "^4.2.5",
     "vue3-cookies": "^1.0.6",
+    "vue3-persian-datetime-picker": "^1.2.2",
     "vuetify": "^3.4.7"
   },
   "devDependencies": {
