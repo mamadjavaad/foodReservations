@@ -34,23 +34,23 @@ const drawer = ref(null)
 
             <v-list density="compact" nav>
                 <!-- WARNING: list item active bug when we are in finance profile btn is still active -->
-                <v-list-item prepend-icon="mdi-account" title="پروفایل من" value="account" :to="{ name:'Profile',exact:true }" ></v-list-item>
+                <v-list-item prepend-icon="mdi-account" title="پروفایل من" value="account" :to="{ name:'Profile'}" exact></v-list-item>
 
                 <v-list-group value="Food">
                     <template v-slot:activator="{ props }">
                         <v-list-item v-bind="props" prepend-icon="mdi-food" title="رزرو غذا"></v-list-item>
                     </template>
 
-                    <v-list-item value="weekly" title="رزرو هفتگی" prepend-icon="mdi-calendar-week"></v-list-item>
+                    <v-list-item :to="{name:'FoodReserve'}"  value="weekly" title="رزرو هفتگی" prepend-icon="mdi-calendar-week" exact></v-list-item>
                     <v-list-item value="daily" title="روز فروش" prepend-icon="mdi-sun-clock-outline"></v-list-item>
-                    <v-list-item :to="{name:'ForgotReceipt',exact:true}" value="forgotReceipt" title="کد فراموشی"
-                        prepend-icon="mdi-lock-question"></v-list-item>
+                    <v-list-item :to="{name:'ForgotReceipt'}" value="forgotReceipt" title="کد فراموشی"
+                        prepend-icon="mdi-lock-question" exact></v-list-item>
 
 
                 </v-list-group>
 
 
-                <v-list-item prepend-icon="mdi-cash-fast " title="امکانات مالی" value="finance" :to="{ name:'Finance',exact: true  }"></v-list-item>
+                <v-list-item prepend-icon="mdi-cash-fast " title="امکانات مالی" value="finance" :to="{ name:'Finance'}" exact></v-list-item>
 
                 <v-list-item prepend-icon="mdi-exit-to-app" title="خروج" value="exit" to="/"></v-list-item>
 
