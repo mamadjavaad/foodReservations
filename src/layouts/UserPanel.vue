@@ -33,7 +33,6 @@ const drawer = ref(null)
             <v-divider></v-divider>
 
             <v-list density="compact" nav>
-                <!-- WARNING: list item active bug when we are in finance profile btn is still active -->
                 <v-list-item prepend-icon="mdi-account" title="پروفایل من" value="account" :to="{ name:'Profile'}" exact></v-list-item>
 
                 <v-list-group value="Food">
@@ -42,7 +41,7 @@ const drawer = ref(null)
                     </template>
 
                     <v-list-item :to="{name:'FoodReserve'}"  value="weekly" title="رزرو هفتگی" prepend-icon="mdi-calendar-week" exact></v-list-item>
-                    <v-list-item value="daily" title="روز فروش" prepend-icon="mdi-sun-clock-outline"></v-list-item>
+                    <v-list-item value="daily" title="روز فروش" prepend-icon="mdi-sun-clock-outline" :to="{name:'DailyReserve'}" exact></v-list-item>
                     <v-list-item :to="{name:'ForgotReceipt'}" value="forgotReceipt" title="کد فراموشی"
                         prepend-icon="mdi-lock-question" exact></v-list-item>
 

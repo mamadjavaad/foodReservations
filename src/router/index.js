@@ -18,6 +18,7 @@ const router = createRouter({
         {path: 'finance', name:'Finance',component: () => import('../views/UserPanel/Finance.vue')},
         {path: 'forgotreceipt', name:'ForgotReceipt',component: () => import('../views/UserPanel/ForgotReceipt.vue')},
         {path: 'foodreserve', name:'FoodReserve',component: () => import('../views/UserPanel/FoodReserve.vue')},
+        {path: 'dailyreserve', name:'DailyReserve',component: () => import('../views/UserPanel/DailyReserve.vue')},
       
       ]
     }

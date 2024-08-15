@@ -67,9 +67,10 @@
         <div class="text-center pa-3 mb-4">
             <p>دسترسی سریع</p>
             <div class="mt-1 w-100 d-flex flex-wrap justify-center">
-                <v-btn class="ma-1" size="small" :to="{name:'FoodReserve'}" exact>رزرو هفتگی</v-btn>
-                <v-btn class="ma-1" size="small" >روز فروش</v-btn>
+                <v-btn class="ma-1" size="small" :to="{name:'DailyReserve'}" exact>روز فروش</v-btn>
                 <v-btn class="ma-1" size="small" :to="{name:'ForgotReceipt'}" exact>کد فراموشی</v-btn>
+                <v-btn class="ma-1" size="small" :to="{name:'FoodReserve'}" exact>رزرو هفتگی</v-btn>
+
             </div>
         </div>
 
