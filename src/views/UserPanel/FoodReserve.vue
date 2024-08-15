@@ -1,6 +1,5 @@
 <script setup>
 import { ref } from 'vue'
-
 const selected = ref([])
 const selectedFood = ref(['چلو جوجه کباب , نوشیدنی 10000', 'چلو جوجه کباب , نوشیدنی 10000', 'چلو جوجه کباب , نوشیدنی 10000', 'چلو جوجه کباب , نوشیدنی 10000', 'چلو جوجه کباب , نوشیدنی 10000', 'چلو جوجه کباب , نوشیدنی 10000', 'چلو جوجه کباب , نوشیدنی 10000'])
 const selectedRestaurant = ref(['مرکزی', 'مرکزی', 'مرکزی', 'مرکزی', 'مرکزی', 'مرکزی', 'مرکزی'])
@@ -10,8 +9,6 @@ const headers = [
     { title: 'انتخاب سلف', align: 'center', value: 'restaurant' },
 
 ]
-
-
 const items = [
     {
         day: 'شنبه',
@@ -57,6 +54,8 @@ const items = [
         selfOptions: ['خلیج فارس', 'مرکزی', 'موسوی'],
     },
 ]
+// import icons
+import { mdiPageNextOutline } from '@mdi/js';
 </script>
 <template>
     <v-main class="d-flex flex-column w-100 flex-wrap align-center ">
@@ -66,7 +65,7 @@ const items = [
             <v-tab :value="2">صبحانه</v-tab>
         </v-tabs>
 
-        <v-btn color="#dde382" class="mt-4" size="large" prepend-icon="mdi-page-next-outline">هفته بعد</v-btn>
+        <v-btn color="#dde382" class="mt-4" size="large" :prepend-icon="mdiPageNextOutline">هفته بعد</v-btn>
 
         <div class="reserve-table mt-3 py-2 text-center rounded-lg border">
             <v-locale-provider locale="fa">
@@ -97,7 +96,7 @@ const items = [
     width: 95% !important;
 
 }
-
+/* customizing framework components */
 :deep(.v-selection-control__input) {
     color: #328458;
 }

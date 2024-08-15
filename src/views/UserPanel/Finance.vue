@@ -1,6 +1,10 @@
 <script setup>
 import { ref } from 'vue'
 const tab = ref(1)
+// import icons
+import { mdiCashRefund } from '@mdi/js';
+import { mdiAccountSchoolOutline } from '@mdi/js';
+import { mdiCashPlus } from '@mdi/js';
 </script>
 <template>
     <v-main class="d-flex flex-column w-100 flex-wrap align-center">
@@ -12,9 +16,9 @@ const tab = ref(1)
             <div v-if="tab == 2"
                 class="finance-card py-6 px-1 mx-4 d-flex flex-column justify-center align-center rounded-lg border">
                 <p>انتقال اعتبار</p>
-                <v-text-field type="number" class="w-100 px-3 pt-4 " append-inner-icon="mdi-cash-refund"
+                <v-text-field type="number" class="w-100 px-3 pt-4 " :append-inner-icon="mdiCashRefund"
                     label="مبلغ انتقالی" variant="solo"></v-text-field>
-                <v-text-field type="number" class="w-100 px-3 pt-2 pb-2" append-inner-icon="mdi-account-school-outline"
+                <v-text-field type="number" class="w-100 px-3 pt-2 pb-2" :append-inner-icon="mdiAccountSchoolOutline"
                     label="شماره دانشجویی گیرنده" variant="solo"></v-text-field>
                 <v-btn color="#359662">ثبت انتقال</v-btn>
             </div>
@@ -84,7 +88,7 @@ const tab = ref(1)
                 class="finance-card py-6 px-1 mx-4 d-flex flex-column justify-center align-center rounded-lg border">
 
                 <p>افزایش موجودی حساب</p>
-                <v-text-field type="number" class="w-100 px-3 pt-4 pb-2" append-inner-icon="mdi-cash-plus"
+                <v-text-field type="number" class="w-100 px-3 pt-4 pb-2" :append-inner-icon="mdiCashPlus"
                     placeholder="10,000" variant="solo"></v-text-field>
                 <v-btn color="#359662">پرداخت</v-btn>
             </div>

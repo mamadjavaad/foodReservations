@@ -30,6 +30,10 @@ const items = [
 
 // import components and icons
 import Navbar from '../components/Navbar.vue'
+import {mdiPostOutline} from '@mdi/js'
+import { mdiLogin } from '@mdi/js';
+import { mdiFoodForkDrink } from '@mdi/js';
+import { mdiSofaSingle } from '@mdi/js';
 </script>
 
 <template>
@@ -45,9 +49,9 @@ import Navbar from '../components/Navbar.vue'
       </template>
     </Navbar>
     <div class="w-100 d-flex align-center justify-center" style="background: #dde382;">
-      <v-btn prepend-icon="mdi-post-outline" variant="text" @click="boxFlag = false"
+      <v-btn :prepend-icon="mdiPostOutline" variant="text" @click="boxFlag = false"
         :class="!boxFlag ? 'border-t-green rounded-0' : ''">اطلاعیه ها</v-btn>
-      <v-btn prepend-icon="mdi-login" variant="text" @click="boxFlag = true"
+      <v-btn :prepend-icon="mdiLogin" variant="text" @click="boxFlag = true"
         :class="boxFlag ? 'border-t-green rounded-0' : ''">ورود به پنل</v-btn>
     </div>
 
@@ -57,7 +61,7 @@ import Navbar from '../components/Navbar.vue'
       <div class="d-flex w-50 mb-5 rounded-xl container-xs " style="min-height: 440px;background-color: white;"
         v-if="boxFlag">
         <div class="w-25 d-flex justify-center align-center banner-xs">
-          <v-icon style="font-size: 50px; color: #dde382;">mdi-food-fork-drink</v-icon>
+          <v-icon style="font-size: 50px; color: #dde382;">{{mdiFoodForkDrink}}</v-icon>
 
         </div>
         <div class="w-75 rounded pa-7 content-xs">
@@ -85,7 +89,7 @@ import Navbar from '../components/Navbar.vue'
       <div class="d-flex w-50 mb-5 rounded-xl container-xs" style="min-height: 440px;background-color: white;"
         v-if="!boxFlag">
         <div class="w-25 d-flex justify-center align-center banner-xs">
-          <v-icon style="font-size: 50px; color: #dde382;"> mdi-sofa-single</v-icon>
+          <v-icon style="font-size: 50px; color: #dde382;">{{ mdiSofaSingle }}</v-icon>
 
         </div>
         <div class="w-75 rounded py-5 content-xs">

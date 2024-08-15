@@ -1,19 +1,20 @@
 <script setup>
 import { ref } from 'vue'
 import DatePicker from 'vue3-persian-datetime-picker'
-
 const today = ref('1403/07/06')
 const chosenMeal = ref('نهار')
 const codeFlag = ref(false)
 const forgetcode = ref(125596)
+// import icons
+import { mdiAlertOutline } from '@mdi/js';
+import { mdiProgressQuestion } from '@mdi/js';
 </script>
 <template>
     <v-main class="d-flex flex-column w-100 flex-wrap align-center">
         <div class="warning-box d-flex justify-end mt-5 mx-5 pa-5 text-right rounded">
             <p>توجه - گرفتن فیش فراموشی تا سقف 5 درخواست درماه مجاز است . بیش از این تعداد با نرخ جریمه ثابت 50000 ریال
                 محاسبه می گردد همچنین غذای آزاد فاقد جریمه می باشد</p>
-            <i class="mdi mdi-alert-outline px-3 "></i>
-
+            <v-icon class="mx-2 ">{{ mdiAlertOutline }}</v-icon>
         </div>
 
         <div class="receipt-card d-flex flex-column justify-center align-center mt-5 mx-5 pa-5 border rounded">
@@ -29,7 +30,7 @@ const forgetcode = ref(125596)
         </div>
         <v-slide-y-transition>
             <div class="mt-6 receipt-card" v-if="codeFlag" transition="fade-transition">
-                <v-alert class="text-body-2 pa-5" icon="mdi-progress-question" border="start" border-color="green"
+                <v-alert class="text-body-2 pa-5" :icon="mdiProgressQuestion" border="start" border-color="green"
                     style="direction: rtl;" title="کد فراموشی" type="success" variant="tonal">
                     از کد فراموشی {{ forgetcode }} برای دریافت وعده غذایی خود استفاده کنید .
                 </v-alert>
