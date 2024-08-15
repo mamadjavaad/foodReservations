@@ -1,29 +1,27 @@
-# foodReservations
+# سامانه رزرو دانشگاهی غذا
 
-This template should help get you started developing with Vue 3 in Vite.
+یک پروژه یک بازطراحی از **سامانه های رزرو غذای دانشگاهی** که با استفاده از Vue 3 و Vuetify ایجاد شده . این نسخه فقط شامل بخش فرانت‌اند هستش و به هیچ API ای متصل نیست؛ بنابراین، بیشتر بخش‌ها عملکرد واقعی ندارند .
 
-## Recommended IDE Setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+ 
+## ابزار استفاده شده
+- Vue 3
+- Vuetify
+- MDI Icons
+-  vite
+## دموی وبسایت
+میتونید دموی انلاین وبسایت از طریف این لینک ببینید : 
+[foodReservations](https://github.com/mamadjavaad/foodReservations/)
+#### توجه : برای صفحه ورود میتونید هر اطلاعاتی رو وارد کنید تا به صفحه اصلی و خود سامانه رزرو دسترسی پیدا کنید.
 
-## Customize configuration
+## نصب و راه‌اندازی ریپازیتوری
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+برای راه‌اندازی پروژه و استفاده ازش ، دستورات زیر رو اجرا کنید:
 
-## Project Setup
-
-```sh
+```bash
+git clone https://github.com/mamadjavaad/foodReservations.git
+cd foodReservations
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
