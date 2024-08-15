@@ -122,7 +122,10 @@ import Navbar from '../components/Navbar.vue'
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
 }
-
+:deep(.v-list-item-subtitle){
+  letter-spacing: normal;
+   line-height:normal;
+}
 //responsive width for devises with max 1300px size
 @media screen and (max-width: 1300px) {
   .container-xs {
