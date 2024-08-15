@@ -9,14 +9,13 @@ const forgetcode = ref(125596)
 </script>
 <template>
     <v-main class="d-flex flex-column w-100 flex-wrap align-center">
-        <div class="warning-box d-flex justify-end mt-5 mx-5 pa-5 text-right rounded"
-            style="background: #dde382;color: #000000b0;font-size: 15px;">
+        <div class="warning-box d-flex justify-end mt-5 mx-5 pa-5 text-right rounded">
             <p>توجه - گرفتن فیش فراموشی تا سقف 5 درخواست درماه مجاز است . بیش از این تعداد با نرخ جریمه ثابت 50000 ریال
                 محاسبه می گردد همچنین غذای آزاد فاقد جریمه می باشد</p>
             <i class="mdi mdi-alert-outline px-3 "></i>
 
         </div>
-      
+
         <div class="receipt-card d-flex flex-column justify-center align-center mt-5 mx-5 pa-5 border rounded">
             <p class="mb-2">دریافت کد فراموشی</p>
             <div class="w-100 d-flex px-2 flex-column " style="direction: rtl;">
@@ -41,8 +40,16 @@ const forgetcode = ref(125596)
 </template>
 
 <style lang="scss" scoped>
-.receipt-card ,.warning-box{
+.receipt-card,
+.warning-box {
     width: 80%;
+}
+
+.warning-box {
+    background: #dde382;
+    color: #000000b0;
+    font-size: 15px;
+    border: 2px solid #8e95105e;
 }
 
 /*  customizing ui framework components  */
@@ -72,7 +79,9 @@ const forgetcode = ref(125596)
 
 /* responsive media  */
 @media screen and (max-width: 500px) {
-    .warning-box,.receipt-card{
+
+    .warning-box,
+    .receipt-card {
         width: 91% !important;
         min-width: 270px !important;
     }
