@@ -11,7 +11,7 @@
 -  vite
 ## دموی وبسایت
 میتونید دموی انلاین وبسایت از طریق طریف این لینک ببینید : 
-[foodReservations](https://github.com/mamadjavaad/foodReservations/)
+[foodReservations](https://mamadjavaad.github.io/foodReservations/)
 #### توجه : برای صفحه ورود میتونید هر اطلاعاتی رو وارد کنید تا به صفحه اصلی و خود سامانه رزرو دسترسی پیدا کنید.
 
 ## نصب و راه‌اندازی ریپازیتوری
